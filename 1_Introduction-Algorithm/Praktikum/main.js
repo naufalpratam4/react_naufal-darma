@@ -1,2 +1,0 @@
-let nama = "Naufal"
-
