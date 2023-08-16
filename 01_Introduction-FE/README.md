@@ -27,18 +27,6 @@ Internet merupakan singkatan atau kependekan dari _International Network_, yang 
 **Domain Name Server**
 Domain Name Server (DNS) adalah sistem yang menghubungkan alamat IP numerik komputer atau server dengan nama domain yang lebih mudah diingat. DNS berfungsi sebagai buku telepon internet
 
-**HTTP**
-HTTP adalah protokol yang digunakan client dan server untuk berhubungan
-
-**Browser Developer**
-Browser developer adalah alat atau fitur yang disediakan oleh peramban web (web browser) yang dirancang khusus untuk membantu pengembang web dalam mengembangkan, menguji, dan mengoptimalkan situs web. Alat-alat ini memungkinkan pengembang untuk memeriksa dan menganalisis kode, tampilan, dan kinerja situs web secara mendalam. Setiap peramban umumnya memiliki set lengkap alat pengembang yang dapat diakses melalui menu atau dengan menggunakan pintasan keyboard.
-
-**Network**
-Memungkinkan melihat semua permintaan dan respons HTTP yang dilakukan oleh situs web, termasuk waktu muat dan ukuran sumber daya.
-
-**Hosting**
-Hosting adalah layanan yang disediakan oleh penyedia layanan hosting yang memungkinkan individu atau organisasi untuk menjalankan situs web atau aplikasi online dengan meng-host (menyimpan) berbagai jenis data seperti halaman web, file, gambar, video, dan konten lainnya di server yang dapat diakses melalui internet. Dalam istilah sederhana, hosting adalah "rumah" di internet di mana situs web atau aplikasi Anda tinggal dan dapat diakses oleh pengguna.
-
 **Bahasa Pemrograman Front End**
 HTML, CSS, dan Javascript
 
