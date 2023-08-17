@@ -21,10 +21,10 @@ Membuat
 2. Lakukan Pull Request pada branch tersebut sehingga akan menambah hal baru pada branch main/master
 
 Membuat branch ![Membuat branch](/02_GIT/screenshots/addBranch.png)
-![Cek branch](/02_GIT/screenshots/cekBranch.png)
-![Checkout branch, untuk switch branch](/02_GIT/screenshots/checkoutBranch.png)
+Cek branch ![Cek branch](/02_GIT/screenshots/cekBranch.png)
+Checkout branch, untuk switch branch ![Checkout branch, untuk switch branch](/02_GIT/screenshots/checkoutBranch.png)
 
 - lalu membuat sebuah file di dalam branch latihan
 - lalu cek file di dalam branch latihan dan main
-  ![cek file di branch latihan](/02_GIT/screenshots/file-di-branch-latihan.png)
-  ![cek file di branch main](/02_GIT/screenshots/file-di-branch-main.png)
+  cek file di branch latihan ![cek file di branch latihan](/02_GIT/screenshots/file-di-branch-latihan.png)
+  cek file di branch main ![cek file di branch main](/02_GIT/screenshots/file-di-branch-main.png)
