@@ -1,4 +1,6 @@
-**Mempelajari konsep dari git**
+# GIT
+
+## Mempelajari konsep dari git
 
 1. add .
 2. pull
@@ -8,6 +10,7 @@
 6. merge
 7. Stash
 8. checkout
+9. Diff
 
 ## Latihan Version Control
 
@@ -29,3 +32,8 @@ Checkout branch, untuk switch branch ![Checkout branch, untuk switch branch](/02
 
   cek file di branch latihan ![cek file di branch latihan](/02_GIT/screenshots/file-di-branch-latihan.png)
   cek file di branch main ![cek file di branch main](/02_GIT/screenshots/file-di-branch-main.png)
+
+## Rangkuman
+
+Version Control and Branch Management (Git)
+Version Control (pengendalian versi) adalah suatu sistem yang digunakan dalam pengembangan perangkat lunak untuk melacak perubahan pada file dan proyek dari waktu ke waktu. Tujuan utama dari version control adalah untuk mengelola dan mengatur perubahan yang terjadi pada source code dan berkas-berkas lainnya, sehingga memungkinkan pengembang bekerja secara kolaboratif, melacak riwayat perubahan, dan menghindari konflik yang tidak diinginkan.
