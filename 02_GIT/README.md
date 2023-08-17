@@ -26,5 +26,6 @@ Checkout branch, untuk switch branch ![Checkout branch, untuk switch branch](/02
 
 - lalu membuat sebuah file di dalam branch latihan
 - lalu cek file di dalam branch latihan dan main
+
   cek file di branch latihan ![cek file di branch latihan](/02_GIT/screenshots/file-di-branch-latihan.png)
   cek file di branch main ![cek file di branch main](/02_GIT/screenshots/file-di-branch-main.png)
