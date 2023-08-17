@@ -20,7 +20,7 @@ Membuat
 1. Buatlah branch baru pada github yang kalian buat
 2. Lakukan Pull Request pada branch tersebut sehingga akan menambah hal baru pada branch main/master
 
-![Membuat branch](/02_GIT/screenshots/addBranch.png)
+Membuat branch ![Membuat branch](/02_GIT/screenshots/addBranch.png)
 ![Cek branch](/02_GIT/screenshots/cekBranch.png)
 ![Checkout branch, untuk switch branch](/02_GIT/screenshots/checkoutBranch.png)
 
