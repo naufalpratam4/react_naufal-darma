@@ -13,4 +13,18 @@
 
 **Soal Prioritas 1**
 ![Membuat repository github](/02_GIT/screenshots/Screenshot%202023-08-17%20105613.png)
+
 **Soal Prioritas 2**
+Membuat
+
+1. Buatlah branch baru pada github yang kalian buat
+2. Lakukan Pull Request pada branch tersebut sehingga akan menambah hal baru pada branch main/master
+
+![Membuat branch](/02_GIT/screenshots/addBranch.png)
+![Cek branch](/02_GIT/screenshots/cekBranch.png)
+![Checkout branch, untuk switch branch](/02_GIT/screenshots/checkoutBranch.png)
+
+- lalu membuat sebuah file di dalam branch latihan
+- lalu cek file di dalam branch latihan dan main
+  ![cek file di branch latihan](/02_GIT/screenshots/file-di-branch-latihan.png)
+  ![cek file di branch main](/02_GIT/screenshots/file-di-branch-main.png)
