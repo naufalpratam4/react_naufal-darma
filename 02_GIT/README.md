@@ -15,7 +15,7 @@
 ## Latihan Version Control
 
 **Soal Prioritas 1**
-![Membuat repository github](/02_GIT/screenshots/Screenshot%202023-08-17%20105613.png)
+![Membuat repository github](/02_GIT/screenshots/file.png)
 
 **Soal Prioritas 2**
 Membuat
