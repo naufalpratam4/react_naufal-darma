@@ -37,3 +37,5 @@ Checkout branch, untuk switch branch ![Checkout branch, untuk switch branch](/02
 
 Version Control and Branch Management (Git)
 Version Control (pengendalian versi) adalah suatu sistem yang digunakan dalam pengembangan perangkat lunak untuk melacak perubahan pada file dan proyek dari waktu ke waktu. Tujuan utama dari version control adalah untuk mengelola dan mengatur perubahan yang terjadi pada source code dan berkas-berkas lainnya, sehingga memungkinkan pengembang bekerja secara kolaboratif, melacak riwayat perubahan, dan menghindari konflik yang tidak diinginkan.
+
+Selesai
