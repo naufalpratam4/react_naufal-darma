@@ -15,7 +15,7 @@
 ## Latihan Version Control
 
 **Soal Prioritas 1**
-![Membuat repository github](/02_GIT/screenshots/Screenshot%202023-08-17%20105613.png)
+![Membuat repository github](/02_GIT/screenshots/file.png)
 
 **Soal Prioritas 2**
 Membuat
@@ -37,3 +37,5 @@ Checkout branch, untuk switch branch ![Checkout branch, untuk switch branch](/02
 
 Version Control and Branch Management (Git)
 Version Control (pengendalian versi) adalah suatu sistem yang digunakan dalam pengembangan perangkat lunak untuk melacak perubahan pada file dan proyek dari waktu ke waktu. Tujuan utama dari version control adalah untuk mengelola dan mengatur perubahan yang terjadi pada source code dan berkas-berkas lainnya, sehingga memungkinkan pengembang bekerja secara kolaboratif, melacak riwayat perubahan, dan menghindari konflik yang tidak diinginkan.
+
+Selesai
