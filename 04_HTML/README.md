@@ -1,4 +1,4 @@
-## Rangkuman
+# Rangkuman
 
 Frontend adalah sebuah bagian dari website yang membuat tampilan yang menarik kepada user
 
