@@ -7,3 +7,6 @@ Figma adalah alat desain dan kolaborasi berbasis web yang sangat populer digunak
 Figma memiliki antarmuka pengguna yang intuitif dan bersih. Alat-alat utama seperti "Canvas" (ruang kerja), "Layers" (lapisan), "Toolbar" (bilah alat), dan "Inspector" (inspektor) memungkinkan desainer untuk membuat dan mengelola elemen desain dengan mudah. Figma menggunakan desain vektor, yang memungkinkan Anda membuat elemen desain yang dapat disesuaikan dengan ukuran apa pun tanpa kehilangan kualitas. Anda dapat membuat bentuk, ikon, dan ilustrasi dengan presisi.
 Salah satu fitur utama Figma adalah kemampuan kolaborasinya. Tim dapat bekerja secara bersama-sama pada satu proyek dalam waktu nyata, membuat perubahan, memberikan komentar, dan melihat perubahan secara langsung.
 Figma memungkinkan Anda membuat prototipe interaktif dengan menambahkan tautan, animasi, dan transisi antara berbagai halaman. Ini membantu dalam memvisualisasikan alur kerja dan pengalaman pengguna.
+
+Link Tugas Figma
+https://www.figma.com/file/ZxmFTD4RoyypB8Z4mHJBNe/Tugas-Figma-Alterra?type=design&node-id=0%3A1&mode=design&t=7qh7WPveAw7a9D7x-1
