@@ -17,46 +17,66 @@
           </div>
         </div>
         <br />
-        <label for="jenis_kelamin">Product Category :</label>
+
         <div class="">
-          <select id="jenis_kelamin" name="jenis_kelamin">
-            <option value="pria">Pria</option>
-            <option value="wanita">Wanita</option>
-          </select>
+          <label for="kategori">Product Category :</label>
+          <div class="">
+            <select id="kategori" name="jenis_kelamin">
+              <option value="" selected></option>
+              <option value="pria">Pria</option>
+              <option value="wanita">Wanita</option>
+            </select>
+          </div>
         </div>
+
         <br />
 
-        <label>Product Freshness :</label>
-        <div class="">
+        <div>
+          <label>Product Freshness :</label>
           <div class="">
-            <input type="radio" id="email" name="kontak" value="email" />
-            <label for="email">Brand New</label>
+            <div class="">
+              <input type="radio" id="email" name="kontak" value="email" />
+              <label for="email">Brand New</label>
+            </div>
+            <div class="">
+              <input type="radio" id="telepon" name="kontak" value="telepon" />
+              <label for="telepon">Second Hank</label>
+            </div>
+            <div class="">
+              <input type="radio" id="telepon" name="kontak" value="telepon" />
+              <label for="telepon">Refurbished</label>
+            </div>
           </div>
+
           <div class="">
-            <input type="radio" id="telepon" name="kontak" value="telepon" />
-            <label for="telepon">Second Hank</label>
+            <label for="myfile">Image of Product</label>
+            <input type="file" id="myfile" name="myfile" />
           </div>
-          <div class="">
-            <input type="radio" id="telepon" name="kontak" value="telepon" />
-            <label for="telepon">Refurbished</label>
-          </div>
-          <label for="myfile">Image of Product</label>
-          <input type="file" id="myfile" name="myfile" />
         </div>
+
+        <div style="padding-top: 10px">
+          <label for="textArea">Additional Description</label>
+          <div class="">
+            <textarea
+              name="Description"
+              id="Description"
+              style="width: 241px; height: 117px; resize: none"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="">
+          <label for="">Product Price :</label>
+          <input
+            id="price"
+            type="number"
+            placeholder="$ 100"
+            style="margin-bottom: 10px"
+          />
+        </div>
+
+        <div class="form-group"><input type="submit" value="Submit" /></div>
       </form>
-      <div class="" style="padding-top: 10px"></div>
-      <label for="textArea">Additional Description</label>
-      <div class="">
-        <textarea style="width: 241px; height: 117px; resize: none"></textarea>
-      </div>
-      <p>Product price :</p>
-      <input
-        id="price"
-        type="number"
-        placeholder="$ 100"
-        style="margin-bottom: 10px"
-      />
-      <div class=""><input type="submit" value="Submit" /></div>
     </div>
   </body>
 </html>
