@@ -106,10 +106,21 @@ Apabila `else`
 
 Loop adalah untuk perulangan code supaya tidak perlu melakukan code satu-satu untuk melakukan perulangan. Contoh perulangan:
 
-1. for loop = `for(inisialisasi variabel; test kondisi; perubahan nilai variabel) {do something}`
-2. For of Loop, Cara lain dalam melakukan looping adalah menggunakan for..of. For of mulai hadir pada ECMAScript 2015 (ES6). Cara ini jauh lebih sederhana dan modern dibanding for loop biasa. Sintaks dasar dari for of loop adalah seperti ini:
+1. for loop
 
-`for(arrayItem of myArray) {do something}`
+```js
+for(inisialisasi variabel; test kondisi; perubahan nilai variabel) {
+    do something
+}
+```
+
+1. For of Loop, Cara lain dalam melakukan looping adalah menggunakan for..of. For of mulai hadir pada ECMAScript 2015 (ES6). Cara ini jauh lebih sederhana dan modern dibanding for loop biasa. Sintaks dasar dari for of loop adalah seperti ini:
+
+```js
+for(arrayItem of myArray) {
+    do something
+}
+```
 
 ```js
 let myArray = ["Luke", "Han", "Chewbacca", "Leia"];
@@ -119,7 +130,7 @@ for(const arrayItem of myArray) {
 }
 ```
 
-3. While and do-while, Metode lain untuk melakukan looping adalah dengan statement while. Sama seperti for, instruksi while mengevaluasi ekspresi boolean dan menjalankan kode di dalam blok while ketika bernilai true.
+1. While and do-while, Metode lain untuk melakukan looping adalah dengan statement while. Sama seperti for, instruksi while mengevaluasi ekspresi boolean dan menjalankan kode di dalam blok while ketika bernilai true.
 contoh :
 
 ```js
