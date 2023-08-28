@@ -2,7 +2,7 @@
 
 ## Rangkuman
 
-### Declaration
+## Declaration
 
 Declaration adalah proses pembuatan variabel untuk menyimpan data
 **Contoh**
@@ -17,7 +17,7 @@ var saat ini jarang digunakan
 
 `console.log` adalah kode bawaan JavaScript untuk menampilkan pesan ke konsol, bisa berupa web konsol atau konsol dari terminal/command prompt.
 
-### Comments
+## Comments
 
 Sebuah komentar akan dilewatkan oleh interpreter atau compiler, sehingga tidak akan memengaruhi alur program yang kita tulis. Komentar ini bisa digunakan sebagai dokumentasi atau penjelasan dari kode yang kita tulis.
 terdapat 2 metode untuk menuliskan comments
@@ -26,7 +26,7 @@ terdapat 2 metode untuk menuliskan comments
 - /*Ini merupakan comentar untuk beberapa baris
   */
 
-### Variable
+## Variable
 
 Pada javascript setidaknya ada 3 cara untuk mendeklarasikan sebuah variable,
 
@@ -37,7 +37,7 @@ Pada javascript setidaknya ada 3 cara untuk mendeklarasikan sebuah variable,
 `let nama = "Naufal"`
 `console.log=(nama)` maka hasilnya `naufal`
 
-### Tipe Data
+## Tipe Data
 
 Tipe data ini terbentuk ketika sebuah variabel tidak memiliki nilai. Artinya, ketika kita mendeklarasikan variabel tanpa menginisialisasikan nilainya, variabel tersebut menjadi undefined.
 contoh :
@@ -74,13 +74,13 @@ contoh:
 `console.log(positifx++)` output 5
 `console.log(positif)` output 6, karena sudah ditambah 1 atau increment pada penugasan sebelumya
 
-### Assignment Operator
+## Assignment Operator
 
 Operator ini digunakan untuk memberikan nilai pada variabel.
 `x = x + y` sama dengan
 `x += y`
 
-### Comparasion Operator
+## Comparasion Operator
 
 1. `==` Membandingkan kedua nilai apakah sama (tidak identik).
 2. `!=` Membandingkan kedua nilai apakah tidak sama (tidak identik).
@@ -102,7 +102,7 @@ contoh code:
 Apabila `else`
 `let x = 10; if(x = 5) {console.log(x);} else {console.log("Nilai bukan 5")}`
 
-### Loop
+## Loop
 
 Loop adalah untuk perulangan code supaya tidak perlu melakukan code satu-satu untuk melakukan perulangan. Contoh perulangan:
 
@@ -122,15 +122,7 @@ for(arrayItem of myArray) {
 }
 ```
 
-```js
-let myArray = ["Luke", "Han", "Chewbacca", "Leia"];
-
-for(const arrayItem of myArray) {
-  console.log(arrayItem)
-}
-```
-
-1. While and do-while, Metode lain untuk melakukan looping adalah dengan statement while. Sama seperti for, instruksi while mengevaluasi ekspresi boolean dan menjalankan kode di dalam blok while ketika bernilai true.
+2. While and do-while, Metode lain untuk melakukan looping adalah dengan statement while. Sama seperti for, instruksi while mengevaluasi ekspresi boolean dan menjalankan kode di dalam blok while ketika bernilai true.
 contoh :
 
 ```js
@@ -142,11 +134,130 @@ while (i <= 100) {
 }
 ```
 
-### Scoping
+```js
+let myArray = ["Luke", "Han", "Chewbacca", "Leia"];
+
+for(const arrayItem of myArray) {
+  console.log(arrayItem)
+}
+```
+
+## Array
+
+Array merupakan tipe data yang dapat mengelompokkan lebih dari satu nilai dan menempatkannya dalam satu variabel. Contoh:
+
+```js
+let myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+console.log(myArray);
+```
+
+output `"Cokelat", 42.5, 22, true, "Programming"`
+
+Perbedaan array dengan object adalah data pada array disusun secara berurutan dan diakses menggunakan index. Untuk mengakses nilai di dalam array, kita gunakan tanda kurung siku `[]` yang di dalamnya berisi angka yang merupakan posisi nilai yang ingin diakses.
+
+contoh:
+
+`console.log(myArray[1])` ouput `42.5`
+
+### Menambahkan array
+
+Untuk menambahkan sebuah array pada akhir index
+
+```js
+myArray.push('index baru')
+console.log(myArrray) output `Cokelat", 42.5, 22, true, "Programming", "index baru"`
+```
+
+### Mengeluarkan array
+
+Sedangkan untuk mengeluarkan data atau elemen terakhir dari array, kita bisa gunakan metode pop().
+
+```js
+const myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+
+myArray.pop();
+console.log(myArray);
+```
+
+output `[ Cokelat, 42.5, 22, true ]`
+
+### shift() dan unshift()
+
+Metode shift() digunakan untuk mengeluarkan elemen pertama dari array, sementara unshift() digunakan untuk menambahkan elemen di awal array.
+
+```js
+const myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+
+myArray.shift();
+myArray.unshift("Apple");
+
+console.log(myArray);
+```
+
+output `[ 'Apple', 42.5, 22, true, 'Programming' ]`
+
+### delete array
+
+untuk menghapus array dapat menggunakan keyword `delete`
+
+```js
+const myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+
+delete myArray[1];
+console.log(myArray);
+```
+
+output `[ 'Cokelat', <1 empty item>, 22, true, 'Programming' ]`
+
+Namun, perhatikan di sini bahwa keyword delete hanya menghapus data pada index yang ditentukan lalu membiarkan posisi tersebut kosong. Untuk menghapus elemen, gunakan metode `splice()` seperti ini:
+
+```js
+const myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+
+myArray.splice(2, 1);   // Menghapus dari index 2 sebanyak 1 elemen
+console.log(myArray);
+```
+
+Selain untuk menghapus elemen pada array, `splice()` juga dapat digunakan untuk menambahkan elemen pada array tersebut. Caranya dengan memberikan argumen ke-3 (atau selanjutnya, bersifat variadic) sebagai nilai yang akan dimasukan pada index yang diberikan pada argumen pertama.
+
+```js
+const month = ['January', 'March', 'April', 'May'];
+console.log('before splice: ', month);
+
+month.splice(1, 0, 'February');
+console.log('after splice: ', month);
+```
+
+output `before splice:  [ 'January', 'March', 'April', 'May' ]` `after splice:  [ 'January', 'February', 'March', 'April', 'May' ]`
+
+## Object
+
+Untuk menetapkan objek pada sebuah variabel kita gunakan tanda kurung kurawal `{}`.
+
+`const user = {}`
+
+Object berisi pasangan `key` dan `value` yang juga dikenal dengan property. Key berperan mirip seperti nama variabel yang menyimpan sebuah nilai. Sementara, value berisi nilai dengan tipe data apa pun termasuk objek lain. Key dan value di dalam object dituliskan seperti berikut:
+
+`let object = {key1: "value1", key2: "value2", key3: "value3"}`
+
+key harus berupa string dan dituliskan titik dua(:) lalu diikuti valuenya
+
+```js
+const user = {
+    nama: "Naufal",
+    umur: 20,
+    asal: "Semarang",
+    maried: false
+}
+
+console.log("Halo nama saya ${user.nama} umur saya ${user.umur} asal saya ${user.asal}")
+```
+
+## Scoping
 
 Scoping menentukan dimana variabel, fungsi dan objek diatur dan dapat diakses dalam kode. Ini berarti ruang lingkup variabel dikendalikan oleh lokasi deklarasi variabel
 
-### Hoisting
+## Hoisting
 
 Hoisting membuat beberapa jenis variabel atau fungsi dapat diakses/digunakan dalam kode sebelum dideklarasikan
 
