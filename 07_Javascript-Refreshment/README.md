@@ -262,3 +262,71 @@ Scoping menentukan dimana variabel, fungsi dan objek diatur dan dapat diakses da
 Hoisting membuat beberapa jenis variabel atau fungsi dapat diakses/digunakan dalam kode sebelum dideklarasikan
 
 Deklarasi var dan function adalah hoisted, oleh karena itu mereka dapat digunakan bahkan sebelum deklarasi itu sendiri terjadi
+
+## DOM (Document Object Model)
+
+Document Object Model adalah API untuk HTML yang merepresentasikan halaman web pada suatu dokumen menjadi sebuah object
+
+### DOM Selection Method
+
+- getElementByID() = Element
+- getElementByTagName() = HTMLCollection
+- getElementByClassName() = HTMLCollection
+- querySelector() = Element
+- querySelectorAll() = nodeList
+
+```html
+<h1 id="topik">Hello World</h1>
+```
+
+```js
+const topik = document.getElementById('topik')
+console.log(topik)
+```
+
+### DOM Manipulation
+
+- element.innerHTML = Digunakan merubah isi dari tag yang sudah diseleksi
+- element.style.propertyCSS = Digunakan merubah style dari tag yang sudah diseleksi
+- element.setAttribute()  = Digunakan mengelola / memanipulasi attribtue yang sudah di seleksi
+- element.classList.add() = Digunakan mengelola / memanipulasi class yang sudah di seleksi
+
+```html
+<h1 id="topik">Hello World</h1>
+```
+
+```js
+const topik = document.getElementById('topik')
+topik.innerHtml = 'Naufal' //Merubah isi dari Tag
+topik.style.color = 'red' //merubah style pada tag
+```
+
+### DOM Event
+
+- onClick = digunakan ketika pengguna mengklik mouse
+- onChange = Digunakan dalam kombinasi dengan validasi bidang input
+- onBlur = Digunakan ketika user meninggalkan kolom input
+- onmouseOver = Digunakan ketika pengguna mengarahkan mouse keluar pada suatu object
+- onCopy = Digunakan ketika pengguna mengcopy suatu object
+
+- Event Handler
+  - Inline HTML Attribute
+  - Element Method
+- addEventListener()
+
+```html
+<h1 id="topik" onclick="ubahWarna">Hello World</h1>
+<p class="p1">Lorem Ipsum</p>
+```
+
+```js
+const topik = document.getElementById('topik')
+let ubahWarna = () => {
+  topik.style.color = 'red'
+}
+
+const p1 = document.querySelector(.p1)
+p1.addEventListener('click', () => {
+  alert('Click di paragraf 3 check')
+})
+```
