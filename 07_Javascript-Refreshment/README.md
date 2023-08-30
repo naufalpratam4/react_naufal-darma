@@ -122,7 +122,7 @@ for(arrayItem of myArray) {
 }
 ```
 
-2. While and do-while, Metode lain untuk melakukan looping adalah dengan statement while. Sama seperti for, instruksi while mengevaluasi ekspresi boolean dan menjalankan kode di dalam blok while ketika bernilai true.
+ While and do-while, Metode lain untuk melakukan looping adalah dengan statement while. Sama seperti for, instruksi while mengevaluasi ekspresi boolean dan menjalankan kode di dalam blok while ketika bernilai true.
 contoh :
 
 ```js
