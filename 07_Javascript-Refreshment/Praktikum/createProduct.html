@@ -105,145 +105,125 @@
         </div>
         <div class="heroContainer">
           <div class="heroContent2">
-            <h3 id="coba">Detail Product</h3>
-            <!-- input -->
-            <div class="input-group">
-              <div class="productForm">
+            <!-- detail -->
+            <h3>Detail Product</h3>
+            <!-- productName -->
+            <form action="" id="form">
+              <div class="productName">
                 <label for="name">Product Name : </label>
+                <input id="productInput" type="text" class="form-control" />
+                <p id="validationProduct"></p>
+              </div>
+              <!-- productCategory -->
+              <div class="pt-3">
+                <label for="">Product Category</label>
+                <select
+                  class="form-select"
+                  id="productCategory"
+                  aria-label="Default select example"
+                >
+                  <option selected value disabled=""></option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <p id="validationCategory"></p>
+              </div>
+
+              <!-- imageOfProduct -->
+              <div class="mb-3 pt-3">
+                <label for="formFile" class="form-label"
+                  >Default file input example</label
+                >
                 <input
-                  id="textInput"
-                  type="text"
-                  class="form-control"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
+                  type="file"
+                  id="productImage"
+                  name="product-image"
+                  class="border border-2 border-primary rounded-3 text-primary form-control"
+                  style="height: 40px; width: 250px"
                 />
-                <p
-                  id="validationFormProduct"
-                  style="color: rgb(246, 60, 60)"
-                ></p>
+                <p id="validationImage"></p>
               </div>
-            </div>
 
-            <!-- productCategory -->
-            <div class="pt-3">
-              <label for="">Product Category</label>
-              <select
-                class="form-select"
-                id="categoryProduct"
-                aria-label="Default select example"
-              >
-                <option selected value=""></option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-              <p id="validationCategory"></p>
-            </div>
-
-            <!-- image of product -->
-
-            <div class="mb-3 pt-3">
-              <label for="formFile" class="form-label"
-                >Default file input example</label
-              >
-              <input
-                type="file"
-                id="productImage"
-                name="product-image"
-                required=""
-                class="border border-2 border-primary rounded-3 text-primary form-control"
-                style="height: 40px; width: 250px"
-              />
-              <p id="validationImage"></p>
-            </div>
-
-            <!-- Product Freshness -->
-            <div class="">
-              <label for=""> Product Freshness </label>
-              <div class="form-check">
-                <input
-                  id="radioProduct1"
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  value="Fresh"
-                />
-                <label class="form-check-label" for="radioProduct1">
-                  Fresh
-                </label>
+              <!-- Product Freshness -->
+              <div>
+                <label for="">Product Freshness</label>
+                <div class="form-check">
+                  <input
+                    id="radioProduct1"
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    value="Fresh"
+                  />
+                  <label class="form-check-label" for="radioProduct1"
+                    >Fresh</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="radioProduct2"
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    value="Moderate"
+                  />
+                  <label class="form-check-label" for="radioProduct2"
+                    >Moderate</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    id="radioProduct3"
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    value="Stale"
+                  />
+                  <label class="form-check-label" for="radioProduct3"
+                    >Stale</label
+                  >
+                </div>
+                <p id="validationRadio" style="color: red"></p>
               </div>
-              <div class="form-check">
-                <input
-                  id="radioProduct2"
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  value="Moderate"
-                />
-                <label class="form-check-label" for="radioProduct2">
-                  Moderate
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  id="radioProduct3"
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  value="Stale"
-                />
-                <label class="form-check-label" for="radioProduct3">
-                  Stale
-                </label>
-              </div>
-              <p id="validationRadio"></p>
-            </div>
 
-            <!-- Additional Description -->
-            <div class="pt-3">
-              <label for="">Additional Description</label>
+              <!-- Additional Description -->
+              <div class="pt-3">
+                <label for="">Additional Description</label>
 
-              <div class="form-floating aDescription">
-                <textarea
-                  id="aDescription"
-                  style="height: 100px"
-                  class="aDescription"
-                ></textarea>
-                <p id="validationMessage"></p>
-                <label for="floatingTextarea2"></label>
+                <div class="form-floating aDescription">
+                  <textarea
+                    id="productDescription"
+                    style="height: 100px; width: 100%"
+                  ></textarea>
+                  <p id="validationDescription"></p>
+                </div>
               </div>
-            </div>
 
-            <!-- Product Pice -->
-            <div class="pt-3">
-              <label for=""> Product Pice </label>
-              <div class="input-group mb-3" style="width: 100%">
-                <input
-                  id="productPrice"
-                  type="number"
-                  class="form-control"
-                  aria-label="Amount (to the nearest dollar)"
-                  placeholder="$ 1"
-                />
-                <p id="validationMessage"></p>
+              <!-- Product Pice -->
+              <div class="pt-3">
+                <label for=""> Product Pice </label>
+                <div class="input-group mb-3" style="width: 100%">
+                  <input
+                    id="productPrice"
+                    type="number"
+                    class="form-control"
+                    aria-label="Amount (to the nearest dollar)"
+                    placeholder="$ 1"
+                  />
+                </div>
+                <p id="validationPrice"></p>
               </div>
-            </div>
-
-            <!-- submit -->
-            <div
-              class="submit pb-3"
-              style="display: flex; justify-content: center"
-            >
+              <!-- button -->
               <button
-                id="submitButton"
                 type="submit"
+                id="submit"
                 class="btn btn-primary"
                 style="width: 100%"
-                onclick="validateText()"
               >
                 Submit
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>

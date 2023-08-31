@@ -1,136 +1,110 @@
-const textInput = document.getElementById("textInput");
-const categoryProduct = document.getElementById("categoryProduct");
+const form = document.getElementById("form");
+const productInput = document.getElementById("productInput");
+const productCategory = document.getElementById("productCategory");
 const productImage = document.getElementById("productImage");
+const radioProduct1 = document.getElementById("radioProduct1");
+const radioProduct2 = document.getElementById("radioProduct2");
+const radioProduct3 = document.getElementById("radioProduct3");
+const productDescription = document.getElementById("productDescription");
 const productPrice = document.getElementById("productPrice");
-const aDescription = document.getElementById("aDescription");
-const radioProduct = document.querySelectorAll("[name='flexRadioDefault']");
+
+// validation
+const validationProduct = document.getElementById("validationProduct");
+const validationCategory = document.getElementById("validationCategory");
+const validationImage = document.getElementById("validationImage");
 const validationRadio = document.getElementById("validationRadio");
-const submitButton = document.getElementById("submitButton");
+const validationDescription = document.getElementById("validationDescription");
+const validationPrice = document.getElementById("validationPrice");
+const submit = document.getElementById("submit");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-function validateText() {
-  let isValid = true;
-
-  // Clear previous validation messages and borders
-  clearValidation();
-
-  // Validate Product Name
-  if (textInput.value.trim() === "") {
-    showErrorAndHighlight(
-      textInput,
-      "validationFormProduct",
-      "Please enter a valid Product name."
-    );
-    isValid = false;
-  } else if (/[@#{}]/.test(textInput.value)) {
-    showErrorAndHighlight(
-      textInput,
-      "validationFormProduct",
-      "Name must not contain symbols."
-    );
-    isValid = false;
+  if (
+    productInput.value.length < 1 &&
+    productCategory.value.length < 1 &&
+    productImage.value.length < 1 &&
+    !radioProduct1.checked &&
+    !radioProduct2.checked &&
+    !radioProduct3.checked &&
+    productDescription.value.length < 1 &&
+    productPrice.value.length < 1
+  ) {
+    alert("The xxx field must be filled in");
   }
-  //   else if (productName.length > 25) {
-  //     showErrorAndHighlight(textInput, "validationFormProduct", "Product Name must not exceed 25 characters.");
-  //     isValid = false;
-  //   } else if (productName.length > 10) {
-  //     alert("Product Name must not exceed 10 characters.");
-  //   gatau masih errorrr
-
-  // Validate Product Category
-  if (categoryProduct.value === "") {
-    showErrorAndHighlight(
-      categoryProduct,
-      "validationCategory",
-      "Please select a product category."
-    );
-    isValid = false;
+  if (productInput.value.length < 1) {
+    // productName
+    validationProduct.textContent = "Tidak boleh kosong";
+    validationProduct.style.color = "red";
+    productInput.style.borderColor = "red";
+  } else if (productInput.value === "@") {
+    validationProduct.textContent = "Tidak boleh menggunakan symbol";
+    validationProduct.style.color = "red";
+    productInput.style.borderColor = "red";
+  } else if (productInput.value.length > 10) {
+    validationProduct.textContent = "Tidak boleh lebih dari 25 karakter";
+    validationProduct.style.color = "red";
+    productInput.style.borderColor = "red";
+  } else {
+    validationProduct.textContent = "";
+    validationProduct.style.color = "";
+    productInput.style.borderColor = "";
   }
 
-  // Validate Product Image
-  if (productImage.value === "") {
-    showErrorAndHighlight(
-      productImage,
-      "validationImage",
-      "Please choose an image for the product."
-    );
-    isValid = false;
+  // productCategory
+  if (productCategory.value.length < 1) {
+    validationCategory.textContent = "Tidak boleh kosong";
+    validationCategory.style.color = "red";
+    productCategory.style.borderColor = "red";
+  } else {
+    validationCategory.textContent = "";
+    validationCategory.style.color = "";
+    productCategory.style.borderColor = "";
   }
 
-  //   product freshness
-
-  // Validate Additional Description
-  if (aDescription.value.trim() === "") {
-    showErrorAndHighlight(
-      aDescription,
-      "validationMessage",
-      "Please fill in the additional description."
-    );
-    isValid = false;
+  // productImage
+  if (productImage.value.length < 1) {
+    validationImage.textContent = "Tidak boleh kosong";
+    validationImage.style.color = "red";
+  } else {
+    validationImage.textContent = "";
+    validationImage.style.color = "";
   }
 
-  // Validate Product Price
-  if (productPrice.value.trim() === "") {
-    showErrorAndHighlight(
-      productPrice,
-      "validationMessage",
-      "Please enter the product price."
-    );
-    isValid = false;
+  // productFreshness
+  if (
+    !radioProduct1.checked &&
+    !radioProduct2.checked &&
+    !radioProduct3.checked
+  ) {
+    validationRadio.textContent = "Please select a product freshness.";
+    validationRadio.style.color = "red";
+
+    radioProduct1.style.borderColor = "red";
+    radioProduct2.style.borderColor = "red";
+    radioProduct3.style.borderColor = "red";
+  } else {
+    validationRadio.textContent = "";
+
+    radioProduct1.style.borderColor = "";
+    radioProduct2.style.borderColor = "";
+    radioProduct3.style.borderColor = "";
   }
 
-  submitButton.disabled = !isValid;
-}
-
-function showErrorAndHighlight(
-  inputElement,
-  validationElementId,
-  errorMessage
-) {
-  const validationElement = document.getElementById(validationElementId);
-  validationElement.textContent = errorMessage;
-  validationElement.style.color = "red";
-  inputElement.classList.add("error-border");
-}
-
-function clearValidation() {
-  const validationElements = document.querySelectorAll(".validation-message");
-  validationElements.forEach((element) => {
-    element.textContent = "";
-  });
-
-  const errorInputs = document.querySelectorAll(".error-border");
-  errorInputs.forEach((input) => {
-    input.classList.remove("error-border");
-  });
-}
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-  if (!submitButton.disabled) {
-    let selectedRadioValue = "";
-    radioProduct.forEach((radio) => {
-      if (radio.checked) {
-        selectedRadioValue = radio.value;
-      }
-    });
-    alert(
-      `Product Name: ${textInput.value}\n` +
-        `Product Category: ${categoryProduct.value}\n` +
-        `Product Freshness: ${selectedRadioValue}\n` +
-        `Product Price: $${productPrice.value}\n` +
-        `Additional Description: ${aDescription.value}`
-    );
+  // productDescription
+  if (productDescription.value.length < 1) {
+    validationDescription.textContent = "Please select a product freshness.";
+    validationDescription.style.color = "red";
+    productDescription.style.borderColor = "red";
+  } else {
+    validationDescription.textContent = "";
+    validationDescription.style.color = "";
+    productDescription.style.borderColor = "";
   }
-}
 
-submitButton.addEventListener("click", handleSubmit);
-textInput.addEventListener("input", validateText);
-categoryProduct.addEventListener("change", validateText);
-productImage.addEventListener("change", validateText);
-productPrice.addEventListener("input", validateText);
-aDescription.addEventListener("input", validateText);
-
-radioProduct.forEach((radio) => {
-  radio.addEventListener("change", validateRadio);
+  // productPrice
+  if (productPrice.value.length < 1) {
+    validationPrice.textContent = "Please input a price";
+    validationPrice.style.color = "red";
+    productPrice.style.borderColor = "red";
+  }
 });
