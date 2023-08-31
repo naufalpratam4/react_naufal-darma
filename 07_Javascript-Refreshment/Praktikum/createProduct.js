@@ -16,6 +16,7 @@ const validationRadio = document.getElementById("validationRadio");
 const validationDescription = document.getElementById("validationDescription");
 const validationPrice = document.getElementById("validationPrice");
 const submit = document.getElementById("submit");
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -106,5 +107,40 @@ form.addEventListener("submit", function (e) {
     validationPrice.textContent = "Please input a price";
     validationPrice.style.color = "red";
     productPrice.style.borderColor = "red";
+  } else {
+    validationPrice.textContent = "";
+    validationPrice.style.color = "";
+    productPrice.style.borderColor = "";
+  }
+
+  // alert
+  if (
+    (productInput.value.length > 1 &&
+      productCategory.value.length > 1 &&
+      productImage.value.length > 1 &&
+      !radioProduct1.checked) ||
+    !radioProduct2.checked ||
+    !radioProduct3.checked ||
+    (productDescription.value.length > 1 && productPrice.value.length > 1)
+  ) {
+    // submit
+    let inputValues = "";
+
+    inputValues += "Product Name: " + productInput.value + "\n";
+    inputValues += "Product Category: " + productCategory.value + "\n";
+    inputValues += "Product Image: " + productImage.value + "\n";
+
+    if (radioProduct1.checked) {
+      inputValues += "Product Freshness: Fresh\n";
+    } else if (radioProduct2.checked) {
+      inputValues += "Product Freshness: Semi-fresh\n";
+    } else if (radioProduct3.checked) {
+      inputValues += "Product Freshness: Not Fresh\n";
+    }
+    inputValues += "Product Description: " + productDescription.value + "\n";
+    inputValues += "Product Price: " + productPrice.value + "\n";
+
+    // Menampilkan semua inputan dalam kotak dialog alert
+    alert(inputValues);
   }
 });
