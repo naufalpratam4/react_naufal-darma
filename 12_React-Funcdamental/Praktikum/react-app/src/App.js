@@ -1,9 +1,9 @@
-import NavbarPage from "./components/NavbarPage";
+import CreateProduct from "./pages/CreateProduct";
 
 export default function App() {
   return (
     <>
-      <NavbarPage />
+      <CreateProduct />
     </>
   );
 }
