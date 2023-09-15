@@ -24,3 +24,6 @@ stateful component
 - berinteraksi dengan aplikasi
 - tidak dapat digunakan kembali
 - meneruskan status dan data ke child
+
+Prop drilling
+harus melewati prop (atau data) dari komponen parent ke komponen child, bahkan jika komponen child tidak benar-benar memerlukan prop tersebut
