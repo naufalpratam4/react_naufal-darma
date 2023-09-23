@@ -1,4 +1,4 @@
-import NavbarPage from "../../../../../14_React-Hook/Praktikum/react-hook/src/components/NavbarPage";
+// import NavbarPage from "../../../../../14_React-Hook/Praktikum/react-hook/src/components/NavbarPage";
 import styles from "../Pages/LandingPage.module.css";
 import { Link } from "react-router-dom";
 const LandingPage = () => {
