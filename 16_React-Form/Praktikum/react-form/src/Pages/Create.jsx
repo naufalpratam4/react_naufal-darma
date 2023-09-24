@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavbarPage from "../Components/NavbarPage";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Tablesss from "../Components/Tables";
+import Table from "react-bootstrap/Table";
 
 const Create = (props) => {
   const [name, setName] = useState("");
@@ -15,15 +15,21 @@ const Create = (props) => {
 
   const [tableData, setTableData] = useState([]); // table
 
-  console.log("tableData type:", typeof tableData);
-  console.log("tableData value:", tableData);
+  // validasi
+
+  const [nameError, setNameError] = useState(false);
+  const [categoryError, setCategoryError] = useState(false);
+  const [priceError, setPriceError] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const [freshnessError, setFreshnessError] = useState(false);
+  const [deskripsiError, setDeskrpsiError] = useState(false);
 
   useEffect(() => {
     // Reset nilai input setelah data dikirimkan ke tabel
     setName("");
     setCategory("");
     setPrice("");
-    setImage(null);
+    setImage("");
     setFreshness("");
     setDeskripsi("");
   }, [tableData]);
@@ -31,9 +37,48 @@ const Create = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Reset status kesalahan
+    setNameError(false);
+    setCategoryError(false);
+    setPriceError(false);
+    setImageError(false);
+    setFreshnessError(false);
+
+    // Validasi nama produk
+    if (!name) {
+      setNameError(true);
+    }
+
+    // Validasi kategori produk
+    if (!category) {
+      setCategoryError(true);
+    }
+
+    // Validasi harga produk
+    if (!price) {
+      setPriceError(true);
+    }
+
+    // Validasi gambar
+    if (!image) {
+      setImageError(true);
+    }
+
+    // Validasi kesegaran
+    if (!freshness) {
+      setFreshnessError(true);
+    }
+
     // Validasi dan pembentukan objek produk
     if (name && category && price && image && freshness) {
-      const product = { name, category, price, image, freshness, deskripsi };
+      const product = {
+        name,
+        category,
+        price,
+        image: URL.createObjectURL(image),
+        freshness: freshness,
+        deskripsi,
+      };
       // Menambahkan produk ke data tabel
       setTableData([...tableData, product]);
     } else {
@@ -72,23 +117,29 @@ const Create = (props) => {
 
         <form onSubmit={handleSubmit}>
           {/* Product Name */}
-          <div className="">
+          <div className={nameError ? "error" : ""}>
             <label className="control-label">Product Name</label>
             <input
               type="text"
               className="form-control"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              style={{
+                border: nameError ? "1px solid red" : "",
+              }}
             />
           </div>
 
           {/* productCategory */}
-          <div className="">
+          <div className={categoryError ? "error" : ""}>
             <label className="control-label">Product Category</label>
             <Form.Select
               aria-label="Default select example"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
+              style={{
+                border: nameError ? "1px solid red" : "",
+              }}
             >
               <option>Choose...</option>
               <option value="1">One</option>
@@ -96,24 +147,28 @@ const Create = (props) => {
               <option value="3">Three</option>
             </Form.Select>
           </div>
+
           {/* file choose */}
-          <div className="">
-            <Form.Group controlId="formFileMultiple" className="mb-3">
-              <Form.Label>Multiple files input example</Form.Label>
+          <div className={imageError ? "error" : ""}>
+            <Form.Group controlId="formFileMultiple" className="mb-2">
+              <Form.Label>Upload Image</Form.Label>
               <Form.Control
                 type="file"
                 multiple
                 accept="image/*" // hanya menerima image
                 onChange={(e) => setImage(e.target.files[0])}
+                style={{
+                  border: nameError ? "1px solid red" : "",
+                }}
               />
             </Form.Group>
           </div>
 
-          {/* radio */}
-          <div className="">
+          {/* Product Freshness */}
+          <div className={freshnessError ? "error" : ""}>
             <label htmlFor="">Product Freshness</label>
             {["Brand New", "Second Hand", "Refurbished"].map((fresh, index) => (
-              <div key={`freshness-${index}`} className="mb-3">
+              <div key={`freshness-${index}`} className={`mb-3 `}>
                 <Form.Check
                   type="radio"
                   id={`freshness-${index}`}
@@ -126,27 +181,34 @@ const Create = (props) => {
             ))}
           </div>
 
-          {/* Description */}
-          <div className="">
+          {/* Deskripsi */}
+          <div className={deskripsiError ? "error" : "pt-2"}>
             <label htmlFor="">Additional Description</label>
             <FloatingLabel controlId="floatingTextarea2" label="Description">
               <Form.Control
                 as="textarea"
                 placeholder="Leave a comment here"
-                style={{ height: "100px" }}
+                value={deskripsi}
                 onChange={(e) => setDeskripsi(e.target.value)}
+                style={{
+                  height: "100px",
+                  border: nameError ? "1px solid red" : "",
+                }}
               />
             </FloatingLabel>
           </div>
-
           {/* Product Price */}
-          <div className="pt-2">
+          <div className={priceError ? "error" : "pt-2"}>
             <label htmlFor="">Product Price</label>
             <input
               type="number"
               className="form-control"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+              placeholder="$ 1"
+              style={{
+                border: nameError ? "1px solid red" : "",
+              }}
             />
           </div>
 
@@ -156,8 +218,46 @@ const Create = (props) => {
               Submit
             </button>
           </div>
+
+          {/* tabel */}
+          <div className="mt-5">
+            <h3 className="fw-bold">Product List</h3>
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Image</th>
+                  <th>Freshness</th>
+                  <th>Description</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableData.map((product, index) => (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+
+                    <td>{product.name}</td>
+                    <td>{product.category}</td>
+                    <td>
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        style={{ maxWidth: "100px" }}
+                      />
+                    </td>
+
+                    <td>{product.freshness}</td>
+                    <td>{product.deskripsi}</td>
+                    <td>${product.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
         </form>
-        <Tablesss data="tableData" />
       </div>
     </>
   );

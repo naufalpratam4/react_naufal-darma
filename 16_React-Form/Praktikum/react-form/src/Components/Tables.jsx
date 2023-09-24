@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tablesss = ({ data }) => {
+const Tablesss = ({ product }) => {
   return (
     <div>
       <h3>Product List</h3>
@@ -15,7 +15,7 @@ const Tablesss = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((product, index) => (
+          {product.map((product, index) => (
             <tr key={index}>
               <td>{product.name}</td>
               <td>{product.category}</td>
