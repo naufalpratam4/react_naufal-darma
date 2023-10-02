@@ -14,7 +14,7 @@ function FormPage() {
       event.preventDefault();
       event.stopPropagation();
     } else {
-      alert("try");
+      alert("Berhasil Input Form");
     }
 
     setValidated(true);
@@ -49,6 +49,7 @@ function FormPage() {
             <Form.Group controlId="validationCustom03" className="mb-3">
               <Form.Label>Email</Form.Label>
               <Form.Control type="email" placeholder="email" required />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
               <Form.Control.Feedback type="invalid">
                 Please provide a valid Email.
               </Form.Control.Feedback>
