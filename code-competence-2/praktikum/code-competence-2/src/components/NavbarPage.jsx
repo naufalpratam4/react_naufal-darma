@@ -60,15 +60,7 @@ function NavbarPage() {
             </li>
             <li>
               <a href="login.html">
-                <button
-                  type="button"
-                  className="btn btn-success"
-                  style={{
-                    borderRadius: 3,
-                    background: "#2e9c44",
-                    boxShadow: "0px 1px 4px 0px rgba(0, 0, 0, 0.15)",
-                  }}
-                >
+                <button type="button" className="btn btn-success pe-4 ps-4">
                   Login
                 </button>
               </a>
