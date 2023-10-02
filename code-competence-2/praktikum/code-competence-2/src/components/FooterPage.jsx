@@ -5,16 +5,8 @@ function FooterPage() {
     <>
       <div className="">
         <footer>
-          {/* title */}
-          <div className="row">
-            <div className="col-lg-11 offset-lg-1">
-              <div className={Footer.title}>
-                <h2>Money Doesn't grow on trees but it can plant them</h2>
-              </div>
-            </div>
-          </div>
           {/* footerContent */}
-          <div className="row pt-5">
+          <div className="row pb-4">
             <div className="col-lg-3 offset-lg-1">
               <h2>My Sosial Media</h2>
               <div className="logo mb-3">
@@ -38,8 +30,7 @@ function FooterPage() {
             </div>
             <div className="col-lg-5">
               <div className={Footer.logoImg}>
-                <img src="public/img/logo-trees.png" alt="" width={"100px"} />
-                <h2>TreeNaufal</h2>
+                <img src="public/img/LOGO.png" alt="" />
               </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
