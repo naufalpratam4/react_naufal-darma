@@ -1,0 +1,56 @@
+# Restfull API
+
+Ringkasan Materi RESTful API:
+
+1. Pengertian RESTful API:
+
+REST (Representational State Transfer): Arsitektur komunikasi berbasis standar HTTP yang digunakan dalam pengembangan web.
+API (Application Programming Interface): Antarmuka yang memungkinkan aplikasi berkomunikasi satu sama lain.
+2. Karakteristik RESTful API:
+
+Stateless: Setiap permintaan dari klien ke server harus mengandung semua informasi yang diperlukan untuk memahami dan memproses permintaan tersebut.
+Resource-Based: Sumber daya (resource) diidentifikasi oleh URI (Uniform Resource Identifier), seperti URL pada web.
+Representations: Data yang dikirimkan antara klien dan server dapat berupa representasi yang berbeda (JSON, XML, HTML, dll.).
+HATEOAS (Hypermedia As The Engine Of Application State): Klien berkomunikasi dengan aplikasi sepenuhnya melalui hyperlink dinamis yang disediakan secara kontekstual oleh aplikasi server.
+3. Metode HTTP dalam RESTful API:
+
+GET: Mendapatkan data dari server.
+POST: Mengirimkan data baru ke server.
+PUT: Memperbarui data yang sudah ada di server.
+DELETE: Menghapus data dari server.
+4. Resource dan URI:
+
+Setiap sumber daya diidentifikasi oleh URI, misalnya, /users atau /products.
+Representasi sumber daya dapat diambil, dimodifikasi, atau dihapus menggunakan metode HTTP yang sesuai.
+5. Status Code HTTP:
+
+2xx (Success): Permintaan berhasil.
+3xx (Redirection): Perlu tindakan tambahan untuk menyelesaikan permintaan.
+4xx (Client Error): Kesalahan dari pihak klien.
+5xx (Server Error): Kesalahan dari pihak server.
+6. Format Data:
+
+XML (eXtensible Markup Language): Format markup yang dapat diubah sesuai kebutuhan.
+7. Autentikasi dan Otorisasi:
+
+Autentikasi mengidentifikasi pengguna, sedangkan otorisasi menentukan hak akses.
+
+## API Tools
+
+1. Katalon
+2. Postman
+3. SoapUI
+4. Insomnia
+5. Apache JMeter
+
+### Postman
+
+Postman adalah HTTP klien yang bisa digunakan testing sebuah web servis. Postman dapat membantu untuk testing dengan mudah dan melakukan documentasi dengan mudah
+
+## Open API
+
+API yang dapat dikonsumsi secara publik/secara bebas dan gratis
+
+Ketika terjadi kesalahan saat klien memasukkan data ke dalam permintaan (request) ke endpoint RESTful API, umumnya respons kode yang digunakan adalah HTTP 400 Bad Request.
+
+HTTP 400 Bad Request digunakan untuk menunjukkan bahwa server tidak dapat memproses permintaan karena permintaan tersebut tidak valid, misalnya, karena data yang tidak sesuai format atau parameter yang tidak valid.
