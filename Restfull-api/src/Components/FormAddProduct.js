@@ -38,8 +38,6 @@ function FormAddProduct() {
         setErrorMessage("");
       }
 
-      // Other validations...
-
       event.preventDefault();
 
       try {
